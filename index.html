@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Certificate Verification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Blockchain Certificate Verification</h1>
+        <p>Secure • Transparent • Reliable</p>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <h2>Welcome to Certificate Verification</h2>
+            <p>Register certificates securely and verify their authenticity using blockchain technology.</p>
+        </section>
+
+        <div class="container">
+
+            <!-- Admin Registration -->
+            <section class="card">
+                <h2>Admin Portal</h2>
+                <p>Register a new certificate</p>
+
+                <form id="registerForm">
+                    <label for="certificateId">Certificate ID</label>
+                    <input
+                        type="text"
+                        id="certificateId"
+                        placeholder="Enter certificate ID"
+                        required
+                    >
+
+                    <label for="studentName">Student Name</label>
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter student name"
+                        required
+                    >
+
+                    <label for="course">Course</label>
+                    <input
+                        type="text"
+                        id="course"
+                        placeholder="Enter course name"
+                        required
+                    >
+
+                    <label for="certificatePdf">Upload Certificate PDF</label>
+                    <input
+                        type="file"
+                        id="certificatePdf"
+                        accept=".pdf,application/pdf"
+                        required
+                    >
+
+                    <button type="submit">Register Certificate</button>
+                </form>
+
+                <p id="registerMessage" role="status"></p>
+            </section>
+
+            <!-- Certificate Verification -->
+            <section class="card">
+                <h2>Verify Certificate</h2>
+                <p>Check whether a certificate matches the registered document.</p>
+
+                <form id="verifyForm">
+                    <label for="verifyId">Certificate ID</label>
+                    <input
+                        type="text"
+                        id="verifyId"
+                        placeholder="Enter certificate ID"
+                        required
+                    >
+
+                    <label for="verifyPdf">Upload Certificate PDF</label>
+                    <input
+                        type="file"
+                        id="verifyPdf"
+                        accept=".pdf,application/pdf"
+                        required
+                    >
+
+                    <button type="submit">Verify Certificate</button>
+                </form>
+
+                <p id="verifyMessage" role="status"></p>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>Blockchain-Based Certificate Verification System</p>
+    </footer>
+
+   
+<script src="https://cdn.jsdelivr.net/npm/ethers@6/dist/ethers.umd.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
